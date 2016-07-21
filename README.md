@@ -4,12 +4,19 @@
 + sqlite3 (comes with python)
 
 ## Steps::
-+ At terminal prompt type 
++ At terminal prompt type
 ```
-export DB_FOLDER="{home}/.db"
+export DB_FOLDER="${HOME}/.db"
+mkdir -p $DB_FOLDER
 pushd $DB_FOLDER
 sqlite3 "funny.db"
+```
++ In sqlite prompt create a table
+```
 create table videos(title text, url text);
+```
++ quit sqlite and return to previous directory
+```
 ctrl+c
 popd
 ```
