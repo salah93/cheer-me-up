@@ -6,13 +6,13 @@
 ## Steps::
 + At terminal prompt type 
 ```
+export DB_FOLDER="{home}/.db"
+pushd $DB_FOLDER
 sqlite3 "funny.db"
-```
-+ In the sqlite-shell type
-```
 create table videos(title text, url text);
-``` 
-+ Go back to terminal prompt (ctrl+c)
+ctrl+c
+popd
+```
 + to make the program executable change permissions
 ```
 chmod 700 cheermup.py
