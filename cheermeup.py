@@ -3,9 +3,11 @@ import random
 import sqlite3
 import webbrowser
 from argparse import ArgumentParser
+from os import environ, path
 
 
-conn = sqlite3.connect('funny.db')
+DB_FOLDER = environ['DB_FOLDER']
+conn = sqlite3.connect(path.join(DB_FOLDER, 'funny.db'))
 c = conn.cursor()
 
 
