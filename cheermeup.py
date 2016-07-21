@@ -6,8 +6,7 @@ from argparse import ArgumentParser
 from os import environ, path
 
 
-DB_FOLDER = environ['DB_FOLDER']
-conn = sqlite3.connect(path.join(DB_FOLDER, 'funny.db'))
+conn = sqlite3.connect(path.join(environ['DB_FOLDER'], 'funny.db'))
 c = conn.cursor()
 
 
@@ -29,6 +28,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.add:
         add(args.t, args.u)
+        print("success :)")
     else:
         cheerup = get_funny()
         print(cheerup[0])
