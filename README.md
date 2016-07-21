@@ -1,4 +1,8 @@
 # cheermeup
+## Requirements
++ python3.4+
++ sqlite3 (comes with python)
+
 ## Steps::
 + At terminal prompt type 
 ```
@@ -13,16 +17,16 @@ create table videos(title text, url text);
 ```
 chmod 700 cheermup.py
 ```
-+ create symbolic link in directory in PATH env variable
++ create link to file in directory in PATH env variable
 ```
-ln -s cheermup.py /usr/local/bin/cheermeup
+ln cheermup.py /usr/local/bin/cheerup
 ```
 + you're all set up :)
 
 ## cheer meh up
 when you need a good pick-me-up type
 ```
-cheermeup
+cheerup
 ```
 
 to get a random video you added..
@@ -30,6 +34,6 @@ to get a random video you added..
 
 ## add videos
 ```
-cheermeup add -t "Title of video" -u "url-of-video"
+cheerup add -t "Title of video" -u "url-of-video"
 ```
 
