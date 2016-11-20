@@ -26,7 +26,7 @@ chmod 700 cheermup.py
 ```
 + create link to file in directory in PATH env variable
 ```
-ln cheermup.py /usr/local/bin/cheerup
+ln -s cheermup.py /usr/local/bin/cheerup
 ```
 + you're all set up :)
 
@@ -43,4 +43,3 @@ to get a random video you added..
 ```
 cheerup add -t "Title of video" -u "url-of-video"
 ```
-
