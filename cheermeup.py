@@ -1,4 +1,4 @@
-#! /usr/local/bin/python3.4
+#! /usr/bin/python3
 import random
 import sqlite3
 import webbrowser
@@ -17,6 +17,7 @@ def get_funny():
 
 def add(title, url):
     c.execute("INSERT INTO videos values(?,?)", (title, url))
+    conn.commit()
 
 
 if __name__ == "__main__":
